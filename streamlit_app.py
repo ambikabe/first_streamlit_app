@@ -43,10 +43,8 @@ try:
      streamlit.dataframe(back_from_function)
 
 except URLError as e:
-
-  
+ streamlit.error()
  # streamlit.write('The user entered ', fruit_choice)
-
 #streamlit.text(fruityvice_response.json())
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
