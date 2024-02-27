@@ -27,7 +27,7 @@ streamlit.dataframe(fruits_to_show)
     #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     #streamlit.dataframe(fruityvice_normalized)
 
-except URLError as e:
+ 
   
 def get_fruityvice_data(this_fruit_choice):
  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
@@ -42,7 +42,7 @@ try:
      back_from_function=get_fruityvice_data(fruit_choice)
      streamlit.dataframe(back_from_function)
 
-
+except URLError as e:
 
   
  # streamlit.write('The user entered ', fruit_choice)
